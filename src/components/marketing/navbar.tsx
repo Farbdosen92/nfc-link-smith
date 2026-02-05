@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   return (
@@ -20,15 +20,15 @@ export function Navbar() {
       </div>
 
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-        <Link href="#features" className="hover:text-blue-500 transition-colors">Features</Link>
-        <Link href="#idea" className="hover:text-blue-500 transition-colors">Unsere Idee</Link>
-        <Link href="#history" className="hover:text-blue-500 transition-colors">Geschichte</Link>
-        <Link href="#tech" className="hover:text-blue-500 transition-colors">NFC Technik</Link>
+        <a href="#features" className="hover:text-blue-500 transition-colors">Features</a>
+        <a href="#idea" className="hover:text-blue-500 transition-colors">Unsere Idee</a>
+        <a href="#history" className="hover:text-blue-500 transition-colors">Geschichte</a>
+        <a href="#tech" className="hover:text-blue-500 transition-colors">NFC Technik</a>
       </div>
 
       <div className="flex items-center gap-4">
         <ModeToggle />
-        <Link href="/login">
+        <Link to="/login">
           <Button className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-6 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
             Login
           </Button>
